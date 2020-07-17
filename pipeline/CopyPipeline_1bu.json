@@ -16,7 +16,7 @@
 				"userProperties": [
 					{
 						"name": "Source",
-						"value": "airbus//Data selection.csv"
+						"value": "blob01/airbus/Data selection.csv"
 					},
 					{
 						"name": "Destination",
