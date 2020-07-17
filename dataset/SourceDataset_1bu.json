@@ -1,13 +1,18 @@
 {
 	"name": "SourceDataset_1bu",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "Data selection.csv",
-				"container": "airbus"
+				"folderPath": "airbus",
+				"container": "blob01"
 			},
 			"columnDelimiter": ";",
 			"escapeChar": "\\",
