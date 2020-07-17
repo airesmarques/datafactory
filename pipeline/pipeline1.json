@@ -1,6 +1,2652 @@
 {
 	"name": "pipeline1",
 	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SqlMISink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ADAPCINUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCINUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPCILEGACYNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCILEGACYNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPLONUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPLONUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPLOLEGACYNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPLOLEGACYNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPCINUMBER2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCINUMBER2",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CINSTACK",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CINSTACK",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPCINUMBER3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCINUMBER3",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "REQUIREMENTID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "REQUIREMENTID",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSISSUEINDEX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSISSUEINDEX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPCINUMBER4",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCINUMBER4",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPCILEGACYNUMBER5",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCILEGACYNUMBER5",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE6",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE6",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE7",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE7",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "A_ADAPDSNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "A_ADAPDSNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "A_ADAPDSISSUEINDEX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "A_ADAPDSISSUEINDEX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "B_ADAPDSNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B_ADAPDSNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE8",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE8",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE9",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE9",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY10",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY10",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSNUMBER11",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSNUMBER11",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSISSUEINDEX12",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSISSUEINDEX12",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYISSUEINDEX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYISSUEINDEX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE13",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE13",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE14",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE14",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY15",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY15",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER16",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER16",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE17",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE17",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE18",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE18",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT19",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT19",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSNUMBER20",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSNUMBER20",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSISSUEINDEX21",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSISSUEINDEX21",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DDPTNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDPTNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DDPTISSUEINDEX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDPTISSUEINDEX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE22",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE22",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE23",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE23",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY24",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY24",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER25",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER25",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE26",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE26",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT27",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT27",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSNUMBER28",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSNUMBER28",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSISSUEINDEX29",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSISSUEINDEX29",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRAWINGSETNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRAWINGSETNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRWSTISSUEINDEX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRWSTISSUEINDEX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE30",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE30",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE31",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE31",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSNUMBER32",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSNUMBER32",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSISSUEINDEX33",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSISSUEINDEX33",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "PNCADNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PNCADNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE34",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE34",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE35",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE35",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY36",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY36",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER37",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER37",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE38",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE38",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE39",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE39",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT40",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT40",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSNUMBER41",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSNUMBER41",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSISSUEINDEX42",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSISSUEINDEX42",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "STDPTNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "STDPTNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE43",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE43",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE44",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE44",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY45",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY45",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER46",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER46",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE47",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE47",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE48",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE48",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT49",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT49",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "FCSM",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FCSM",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "MATERIAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MATERIAL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CLASSIFICATION",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CLASSIFICATION",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPLONUMBER50",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPLONUMBER50",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPLOLEGACYNUMBER51",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPLOLEGACYNUMBER51",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSNUMBER52",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSNUMBER52",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPDSISSUEINDEX53",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPDSISSUEINDEX53",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE54",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE54",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE55",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE55",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPLONUMBER56",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPLONUMBER56",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "REQUIREMENTID57",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "REQUIREMENTID57",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CACCCODE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CACCCODE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPCINUMBER58",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCINUMBER58",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPCILEGACYNUMBER59",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCILEGACYNUMBER59",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE60",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE60",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE61",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE61",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CACCCODE62",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CACCCODE62",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYNUMBER63",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYNUMBER63",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYISSUEINDEX64",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYISSUEINDEX64",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE65",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE65",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE66",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE66",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYNUMBER67",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYNUMBER67",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYISSUEINDEX68",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYISSUEINDEX68",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ADAPCINUMBER69",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ADAPCINUMBER69",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE70",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE70",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE71",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE71",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY72",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY72",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER73",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER73",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE74",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE74",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT75",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT75",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "A_DASSYNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "A_DASSYNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "A_DASSYISSUEINDEX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "A_DASSYISSUEINDEX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "B_DASSYNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B_DASSYNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "B_DASSYISSUEINDEX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B_DASSYISSUEINDEX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE76",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE76",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE77",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE77",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY78",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY78",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER79",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER79",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE80",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE80",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE81",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE81",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT82",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT82",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "A_DASSYNUMBER83",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "A_DASSYNUMBER83",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "B_DASSYNUMBER84",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B_DASSYNUMBER84",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE85",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE85",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE86",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE86",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYCODE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYCODE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYCONDITION",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYCONDITION",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYLINKTYPE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYLINKTYPE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "TEAM_O_DASSY_A",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TEAM_O_DASSY_A",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "TEAM_O_DASSY_B",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TEAM_O_DASSY_B",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYNUMBER87",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYNUMBER87",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYISSUEINDEX88",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYISSUEINDEX88",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DDPTNUMBER89",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDPTNUMBER89",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DDPTISSUEINDEX90",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDPTISSUEINDEX90",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE91",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE91",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE92",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE92",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY93",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY93",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER94",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER94",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE95",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE95",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE96",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE96",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "MINUS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MINUS",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT97",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT97",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "A_DASSYNUMBER98",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "A_DASSYNUMBER98",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "B_DDPTNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B_DDPTNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE99",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE99",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE100",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE100",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYCODE101",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYCODE101",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYCONDITION102",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYCONDITION102",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYLINKTYPE103",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYLINKTYPE103",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYNUMBER104",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYNUMBER104",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYISSUEINDEX105",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYISSUEINDEX105",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRAWINGSETNUMBER106",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRAWINGSETNUMBER106",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRWSTISSUEINDEX107",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRWSTISSUEINDEX107",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE108",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE108",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE109",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE109",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYNUMBER110",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYNUMBER110",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DASSYISSUEINDEX111",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DASSYISSUEINDEX111",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "STDPTNUMBER112",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "STDPTNUMBER112",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE113",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE113",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE114",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE114",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY115",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY115",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER116",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER116",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE117",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE117",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE118",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE118",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT119",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT119",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "FSCM",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FSCM",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "MATERIAL120",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MATERIAL120",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CLASSIFICATION121",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CLASSIFICATION121",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "A_DDPTNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "A_DDPTNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "B_DASSYNUMBER122",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B_DASSYNUMBER122",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE123",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE123",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE124",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE124",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYCODE125",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYCODE125",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYCONDITION126",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYCONDITION126",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYLINKTYPE127",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYLINKTYPE127",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "A_DDPTNUMBER128",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "A_DDPTNUMBER128",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "B_DDPTNUMBER129",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B_DDPTNUMBER129",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE130",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE130",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE131",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE131",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYCODE132",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYCODE132",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYCONDITION133",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYCONDITION133",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICYLINKTYPE134",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICYLINKTYPE134",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DDPTNUMBER135",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDPTNUMBER135",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DDPTISSUEINDEX136",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDPTISSUEINDEX136",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRAWINGSETNUMBER137",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRAWINGSETNUMBER137",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRWSTISSUEINDEX138",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRWSTISSUEINDEX138",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE139",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE139",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE140",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE140",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DDPTNUMBER141",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDPTNUMBER141",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DDPTISSUEINDEX142",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDPTISSUEINDEX142",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "STDPTNUMBER143",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "STDPTNUMBER143",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CDATE144",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CDATE144",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UDATE145",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UDATE145",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "QUANTITY146",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QUANTITY146",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBER147",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBER147",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ITEMNUMBERZONE148",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ITEMNUMBERZONE148",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "LENGTH",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LENGTH",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "WIDTH",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "WIDTH",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "THICKNESSORDIAMETER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "THICKNESSORDIAMETER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "THICKNESS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "THICKNESS",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DIAMETER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DIAMETER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "UNIT149",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UNIT149",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "FCSM150",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FCSM150",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "MINUS151",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MINUS151",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ALTERNCODE152",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALTERNCODE152",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRWSTNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRWSTNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRWSTISSUE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRWSTISSUE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DQNNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DQNNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IMPACTTYPE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IMPACTTYPE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CIN",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CIN",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ATACODE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ATACODE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CACODE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CACODE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "INTEGRATIONISSUE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "INTEGRATIONISSUE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "MSN",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MSN",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IMPACTEDDS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IMPACTEDDS",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IMPACTSTATUS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IMPACTSTATUS",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRAWINGSETNUMBER153",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRAWINGSETNUMBER153",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRWSTISSUEINDEX154",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRWSTISSUEINDEX154",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRAWINGNUMBER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRAWINGNUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "DRWISSUEINDEX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRWISSUEINDEX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "REQUIREMENTID155",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "REQUIREMENTID155",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "CINSTACK156",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CINSTACK156",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_1bu",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_1bu",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"concurrency": 1,
 		"annotations": []
 	}
 }
